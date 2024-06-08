@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './App.css';
 import About from './pages/About';
 import ArenaBattle from './pages/ArenaBattle';
@@ -13,9 +13,10 @@ function App() {
       <>
         <Routes>
           <Route path="/" element={<Home />} >
+            <Route path="/" element={<ArenaBattle />} />
             <Route path="/about" element={<About />} />
-            <Route path="/arena-battle" element={<ArenaBattle />} />
             <Route path="/leaderboard" element={<Leaderboard />} />
+            <Route path="/arena-battle" element={<ArenaBattle />} />
           </Route>
         </Routes>
       </>
